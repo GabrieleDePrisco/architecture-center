@@ -5,6 +5,7 @@
 .cardLink:active {
     color: inherit !important;
     text-decoration: none !important;
+    position: relative;
 }
 
 .default {
@@ -228,4 +229,18 @@
 :root[data-theme='dark'] .disabled:hover .inline {
     color: var(--text-color-dark-mode);
     opacity: 0.5;
+}
+
+.newBadge {
+    position: absolute;
+    top: -15px;
+    right: 8px;
+    background-color: #89d1ff;
+    color: #FFFFFF;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 1rem;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }

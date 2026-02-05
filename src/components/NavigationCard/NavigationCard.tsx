@@ -16,6 +16,7 @@ interface CustomButtonProps {
     link: string;
     disabled?: boolean;
     alwaysShowLock?: boolean;
+    isNew?: boolean;
     onMouseEnter?: () => void;
     onMouseLeave?: () => void;
 }
@@ -29,6 +30,7 @@ export default function NavigationCard({
     link,
     disabled = false,
     alwaysShowLock = false,
+    isNew = false,
     onMouseEnter,
     onMouseLeave,
 }: CustomButtonProps): JSX.Element {
@@ -89,6 +91,8 @@ export default function NavigationCard({
         </Card>
     );
 
+    const newBadge = isNew && <div className={styles.newBadge}>New</div>;
+
     // Always show lock icon and handle authentication flow when needed
     if (requiredProvider) {
         if (!user || user.provider !== requiredProvider) {
@@ -107,6 +111,7 @@ export default function NavigationCard({
                     onClick={() => handleLogin(requiredProvider, link)}
                     style={{ cursor: 'pointer' }}
                 >
+                    {newBadge}
                     {cardContent}
                 </div>
             );
@@ -115,6 +120,7 @@ export default function NavigationCard({
 
     return (
         <Link to={link} className={styles.cardLink}>
+            {newBadge}
             {cardContent}
         </Link>
     );

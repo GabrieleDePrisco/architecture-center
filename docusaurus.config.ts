@@ -59,6 +59,19 @@ const config: Config = {
                 showLastUpdateAuthor: true,
                 onInlineTags: 'warn',
                 editUrl: 'https://github.com/SAP/architecture-center/edit/dev/',
+            }
+        ],
+        [
+            '@docusaurus/plugin-content-docs',
+            {
+                id: 'northstar-architecture',
+                path: 'northstar-architecture',
+                routeBasePath: 'northstar-architecture',
+                sidebarPath: require.resolve('./sidebarsCommunity'),
+                showLastUpdateTime: true,
+                showLastUpdateAuthor: true,
+                onInlineTags: 'warn',
+                editUrl: 'https://github.com/SAP/architecture-center/edit/dev/',
             },
         ],
         async function tailwindcss() {

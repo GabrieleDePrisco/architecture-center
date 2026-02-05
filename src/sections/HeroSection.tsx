@@ -184,6 +184,7 @@ export default function HeroSection(): JSX.Element {
                             icon={item.icon}
                             link={item.link}
                             disabled={item.disabled}
+                            isNew={item.isNew}
                             onMouseEnter={() => handleCardHover(index)}
                             onMouseLeave={handleCardLeave}
                         />

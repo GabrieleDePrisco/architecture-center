@@ -10,6 +10,7 @@ export const navigationCardsData = [
     { title: 'Solution Diagram Guidelines', icon: 'sap-icon://learning-assistant', link: 'https://sap.github.io/btp-solution-diagrams' },
     { title: 'Community of Practice', icon: 'sap-icon://group', link: '/community/intro' },
     { title: "What's new", icon: 'sap-icon://marketing-campaign', link: '/blog' },
+    { title: "AI-Native North Star Architecture", icon: 'sap-icon://ai', link: '/northstar-architecture/intro', isNew: true },
 ];
 
 // Keep items sorted alphabetically by `title`
